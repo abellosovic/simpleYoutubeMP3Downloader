@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form method="get" action="/download">
+        <input type="text" size="45" name="url" placeholder="https://www.youtube.com/watch?v=NUsoVlDFqZg">
+        <button>Descargar</button>
+    </form>
+    <br>
+    {% if download_ok == True%}
+      Descarga OK
+    {% endif %}
+    {% if download_ok == False%}
+      Fallo la descarga
+    {% endif %}
+    <br>
+    <br> {% for item in mp3_files %}
+    <div style="with: 30px">
+        <span>{{item}}</span>
+        <audio controls>
+            <source src="static/{{item}}" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+    </div>
+    {% endfor %}
+</body>
+</html>
