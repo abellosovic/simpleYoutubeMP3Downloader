@@ -1,4 +1,4 @@
 CherryPy==6.0.1
 Jinja2==2.8
-youtube-dl==2016.6.19.1
+youtube-dl
 uwsgi==2.0.13.1
